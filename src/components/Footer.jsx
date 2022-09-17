@@ -14,7 +14,7 @@ function Footer() {
                 </a>
 			</div>
 			<p>
-				Data from{' '}
+				Data from
 				<a className='text-[#3861FB]' href='https://coinstats.app/'>
 					CoinStats
 				</a>

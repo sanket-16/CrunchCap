@@ -3,7 +3,7 @@ import Row from './Row';
 
 function Table({ data }) {
 	return (
-		<table className='m-10 w-9/12 p-6 text-center overflow-y-scroll'>
+		<table className='md:m-10  md:p-6 text-center md:w-full'>
 			<thead className='border-b border-slate-400/[.24] sticky top-0 bg-[#17171A] '>
 				<tr >
 					<th className='p-6'>Rank</th>

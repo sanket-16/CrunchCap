@@ -10,11 +10,11 @@ function Home() {
 	return (
 		<>
 			<div className='flex justify-center mt-20 mb-10'>
-				<div className='w-9/12 font-semibold text-2xl'>
+				<div className=' font-semibold text-2xl'>
 					Today's Cryptocurrency Prices
 				</div>
 			</div>
-			<div className=' flex items-center justify-center'>
+			<div className=' flex items-center md:justify-center overflow-y-scroll md:overflow-hidden'>
 				<Table data={coins} />
 			</div>
 		</>
