@@ -10,9 +10,9 @@ function News() {
 	}, []);
 
 	return (
-		<div className='p-10'>
-			<h1 className='font-bold text-4xl'>News</h1>
-			<div className='grid grid-cols-3 gap-y-8'>
+		<div className='md:p-10'>
+			<h1 className='font-bold text-4xl py-5'>News</h1>
+			<div className='grid md:grid-cols-3 gap-y-8'>
 				{news.map((bulletin) => {
 					return (
 						<Card key={bulletin.id} bulletin={bulletin}/>

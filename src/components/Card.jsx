@@ -3,7 +3,7 @@ import React from 'react';
 function Card({ bulletin }) {
 	return (
 		<a  href={bulletin.link} target='_blank' rel='noreferrer'>
-			<div className='m-10 rounded-md h-full transition hover:scale-110'>
+			<div className='md:m-10 rounded-md h-full transition hover:scale-110'>
 				<div>
 					<img
 						className='w-full rounded-md'
