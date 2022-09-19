@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 function Footer() {
 	return (
-		<div className='relative bottom-0 text-center'>
+		<div className=' static bottom-0 text-center'>
 			<p className='font-bold'>Made by Sanket</p>
 			<div className='flex items-center justify-center p-2'>
 				<a className='pr-2 hover:text-[#3861FB]' href='https://github.com/sanket-16'>
@@ -15,7 +15,7 @@ function Footer() {
 			</div>
 			<p>
 				Data from
-				<a className='text-[#3861FB]' href='https://coinstats.app/'>
+				<a className='text-[#3861FB] px-1' href='https://coinstats.app/'>
 					CoinStats
 				</a>
 			</p>

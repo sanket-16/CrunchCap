@@ -12,9 +12,7 @@ export function fetchCoins(setData) {
 			console.log(response.data.coins);
 			setData(response.data.coins);
 		})
-		.catch((error) => {
-			console.log(error);
-		});
+		
 }
 
 export function fetchNews(setNews) {
@@ -29,7 +27,20 @@ export function fetchNews(setNews) {
 			console.log(response.data.news);
 			setNews(response.data.news);
 		})
-		.catch((error) => {
-			console.log(error);
-		});
+		
+}
+
+export function fetchCoin(id,setCoin) {
+	let config = {
+		method: 'get',
+		url: `https://api.coinstats.app/public/v1/coins/${id}`,
+		headers: {},
+	};
+
+	axios(config)
+		.then((response) => {
+			console.log(response.data.coin);
+			setCoin(response.data.coin);
+		})
+		
 }

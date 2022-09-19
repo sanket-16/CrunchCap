@@ -11,11 +11,11 @@ function Navbar() {
 				<div>
 					<div className='flex items-center justify-between py-3 md:py-5 md:block'>
 						<Link href='./'>
-							<h2 className='text-2xl md:text-4xl font-bold'>CryptoCrunch</h2>
+							<h1 className='text-2xl md:text-4xl font-bold hover:text-[#3861FB] hover:scale-110 transition'>CryptoCrunch</h1>
 						</Link>
 						<div className='md:hidden'>
 							<button
-								className='p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border'
+								className='p-2 text-gray-700 rounded-md outline-none '
 								onClick={() => setNavbar(!navbar)}
 							>
 								{navbar ? (
@@ -34,10 +34,10 @@ function Navbar() {
 						}`}
 					>
 						<ul className='font-bold items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0'>
-							<li className='hover:text-[#3861FB]'>
+							<li className='hover:text-[#3861FB] hover:scale-110 transition'>
 								<Link to='./'>Home</Link>
 							</li>
-							<li className='hover:text-[#3861FB] '>
+							<li className='hover:text-[#3861FB] hover:scale-110 transition'>
 								<Link to='./news'>News</Link>
 							</li>
 						</ul>
