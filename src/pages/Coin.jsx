@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { IoMdArrowDropupCircle, IoMdArrowDropdownCircle } from 'react-icons/io';
+import { useParams, Link } from 'react-router-dom';
+import {
+	IoMdArrowDropupCircle,
+	IoMdArrowDropdownCircle,
+	IoIosLink,
+	IoLogoTwitter,
+	IoMdSearch
+} from 'react-icons/io';
 
 import { fetchCoin } from '../components/api';
 import Loading from '../components/Loading';
+import Badge from '../components/Badge';
 
 function Coin() {
 	const { id } = useParams();
@@ -30,16 +37,16 @@ function Coin() {
 						<div className=' md:flex-col flex justify-between'>
 							<div className='flex md:justify-center items-center'>
 								<h1 className=' flex items-center gap-2 text-xl md:text-4xl font-bold'>
-									<img className='w-10' src={coin.icon} alt='icon' />
+									<img
+										className='w-10'
+										src={coin.icon}
+										alt='icon'
+									/>
 									{coin.name}
 								</h1>
-								<p className='m-2 p-1  bg-white/50 rounded text-xs'>
-									{coin.symbol}
-								</p>
+								<Badge content={coin.symbol}></Badge>
 							</div>
-							<p className='w-fit my-2 p-2 rounded-md bg-white/50 text-xs'>
-								Rank #{coin.rank}
-							</p>
+							<Badge content={`Rank # ${coin.rank}`} />
 						</div>
 						<div className='flex md:flex-col items-center md:items-start justify-between'>
 							<h1 className='md:text-3xl text-xl font-bold'>
@@ -60,6 +67,37 @@ function Coin() {
 								{parseFloat(coin.priceChange1d).toFixed(2)} %
 							</h2>
 						</div>
+					</div>
+					<div>
+						<div>
+							<div className='flex'>
+								<Link to={coin.websiteUrl}>
+									<Badge
+										content='Website'
+										icon={<IoIosLink />}
+									/>
+								</Link>
+								<Link to={coin.twitterUrl}>
+									<Badge
+										content='Twitter'
+										icon={<IoLogoTwitter />}
+									/>
+								</Link>
+							</div>
+							<button className='peer flex items-center gap-2 px-5 py-2 bg-white/50 hover:white/80 text-white rounded-md m-2'>
+							<IoMdSearch/> Explorers
+							</button>
+							<div className='hidden peer-hover:flex hover:flex w-[200px] flex-col bg-white/50 rounded-md'>
+								{coin.exp.map(explorer => {
+									return(
+									<Link className='px-5 py-3 bg-white/50' to='#'>
+										{explorer}
+									</Link>
+									)
+								})}
+							</div>
+						</div>
+						<div></div>
 					</div>
 				</div>
 			)}
